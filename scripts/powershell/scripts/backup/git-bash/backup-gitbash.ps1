@@ -1,7 +1,7 @@
 # profile
 $script:profileDirectory = "$env:ProgramFiles\Git\etc\profile.d"
 $script:profileBackup = "$env:UserProfile\terminal\scripts\git-bash\profile-backup"
-Remove-Item -Recurse -Path "$onedriveProfile\*"
+Remove-Item -Recurse -Path "$profileBackup\*"
 Copy-Item -Recurse -Path "$profileDirectory\*" -Destination "$profileBackup"
 
 write-host "✅ backed up " -ForegroundColor DarkYellow -NoNewline

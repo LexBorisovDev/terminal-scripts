@@ -1,25 +1,21 @@
-# C:\Program Files\Git\etc\profile.d\git-prompt.sh
-
-# if test -f /etc/profile.d/git-sdk.sh
-# then
-# 	TITLEPREFIX=SDK-${MSYSTEM#MINGW}
-# else
-# 	TITLEPREFIX=$MSYSTEM
-# fi
+if test -f /etc/profile.d/git-sdk.sh
+then
+	TITLEPREFIX=SDK-${MSYSTEM#MINGW}
+else
+	TITLEPREFIX=$MSYSTEM
+fi
 
 if test -f ~/.config/git/git-prompt.sh
 then
 	. ~/.config/git/git-prompt.sh
 else
-	# PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]' # set window title
-	PS1='\[\033[1;30m\]git-bash:' 	# set to gray
-	PS1="$PS1"'\[\033]0$PWD\007\]' 	# set window title
-	#PS1="$PS1"'\n'                 # new line
-	PS1="$PS1"'\[\033[32m\]'       # change to green
-	#PS1="$PS1"'\u@\h '             # user@host<space>
-	PS1="$PS1"'\[\033[35m\]'       # change to purple
-	#PS1="$PS1"'$MSYSTEM '          # show MSYSTEM
-	PS1="$PS1"'\[\033[1;32m\]'       # change color
+	PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]' # set window title
+	# PS1="$PS1"'\n'                 # new line
+	# PS1="$PS1"'\[\033[32m\]'       # change to green
+	# PS1="$PS1"'\u@\h '             # user@host<space>
+	# PS1="$PS1"'\[\033[35m\]'       # change to purple
+	# PS1="$PS1"'$MSYSTEM '          # show MSYSTEM
+	PS1="$PS1"'\[\033[33m\]'       # change to brownish yellow
 	PS1="$PS1"'\W'                 # current working directory
 	if test -z "$WINELOADERNOEXEC"
 	then
@@ -35,9 +31,9 @@ else
 			PS1="$PS1"'`__git_ps1`'   # bash function
 		fi
 	fi
-	PS1="$PS1"'\[\033[00m\]'        # change color
-	# PS1="$PS1"'\n'                  # new line
-	PS1="$PS1"'$\[\033[00m\] '        # prompt: always $
+	PS1="$PS1"'\[\033[0m\]'        # change color
+	# PS1="$PS1"'\n'                 # new line
+	PS1="$PS1"'$ '                 # prompt: always $
 fi
 
 MSYS2_PS1="$PS1"               # for detection by MSYS2 SDK's bash.basrc

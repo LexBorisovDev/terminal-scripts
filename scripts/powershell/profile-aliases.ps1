@@ -250,6 +250,7 @@ Set-Alias -Name backup-aliases -Value "$env:PowershellScriptsDirectory\scripts\b
 Set-Alias -Name backup-modules -Value "$env:PowershellScriptsDirectory\scripts\backup\backup-modules.ps1"
 Set-Alias -Name backup-github -Value "$env:PowershellScriptsDirectory\scripts\backup\backup-github.ps1"
 Set-Alias -Name backup-terminal -Value "$env:PowershellScriptsDirectory\scripts\backup\backup.ps1"
+Set-Alias -Name backup-gitbash -Value "$env:PowershellScriptsDirectory\scripts\backup\git-bash\backup-gitbash.ps1"
 Set-Alias -Name bu -Value backup-terminal
 
 

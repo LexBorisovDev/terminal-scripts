@@ -39,11 +39,10 @@ alias go='go-forward'
 alias gf='go-forward'
 alias pf='program-files'
 alias usr='user'
-alias sen='seneca'
 
 # ========= ALIASES =========
-alias edit-aliases='code ~/.bash_aliases'
-alias source-aliases='source ~/.bash_aliases'
+alias edit-aliases='code /c/Program\ Files/Git/etc/profile.d/aliases.sh'
+alias source-aliases='source code /c/Program\ Files/Git/etc/profile.d/aliases.sh'
 alias ea='edit-aliases'
 alias sa='source-aliases'
 
